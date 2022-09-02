@@ -1,5 +1,21 @@
 # @backstage/cli
 
+## 0.19.0-next.2
+
+### Patch Changes
+
+- 8d886dd33e: The `create-plugin` and `create` commands have both been deprecated in favor of a new `new` command. The `new` command is functionally identical to `create`, but the new naming makes it possible to use as yarn script, since `yarn create` is reserved.
+- 513b4dd4ef: The `versions:bump` command will now update dependency ranges in `package.json`, even if the new version is within the current range.
+- 221e951298: Added support for custom certificate for webpack dev server.
+- 3d4f5daadf: Remove use of deprecated trimLeft/trimRight
+- e7600bdb04: Tweaked workspace packaging to not rewrite existing `package.json` files.
+- 1cb078ad9f: Fixed a misconfiguration where all modules where treated as ESM by the React Refresh plugin for Webpack.
+- 87ec2ba4d6: Updated dependency `msw` to `^0.46.0`.
+- 68c2697077: Added a new `backstage-cli repo clean` command that cleans the repo root and runs the clean script in all packages.
+- Updated dependencies
+  - @backstage/config-loader@1.1.4-next.1
+  - @backstage/release-manifests@0.0.6-next.1
+
 ## 0.19.0-next.1
 
 ### Minor Changes
